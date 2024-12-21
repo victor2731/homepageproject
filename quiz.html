@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        footer {
+            margin-top: 2em;
+            text-align: center;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: #F87476;
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        function checkAnswers() {
+            const question1 = document.getElementById('question1');
+            const question2 = document.getElementById('question2');
+            const question3 = document.getElementById('question3');
+            const answer1 = question1.value.toLowerCase();
+            const answer2 = question2.value.toLowerCase();
+            const answer3 = question3.value.toLowerCase();
+
+            if (answer1 === 'orange') { // Replace 'blue' with the correct answer
+                question1.className = 'correct';
+            } else {
+                question1.className = 'incorrect';
+            }
+            if (answer2 === 'music') { // Replace 'blue' with the correct answer
+                question2.className = 'correct';
+            } else {
+                question2.className = 'incorrect';
+            }
+
+            if (answer3 === 'chanti') { // Replace 'reading' with the correct answer
+                question3.className = 'correct';
+            } else {
+                question3.className = 'incorrect';
+            }
+        }
+    </script>
+</head>
+<body class="back">
+    <div class="nav">
+        <h1 class= "heading", style="font-family:Monoton;">Victor! 😃</h1>
+        <button class="navbutton" onclick="navigateTo('index.html')">Home</button>
+        <button class="navbutton" onclick="navigateTo('personal_info.html')">Personal Info</button>
+        <button class="navbutton" onclick="navigateTo('projects.html')">Projects</button>
+        <button class="navbutton" onclick="navigateTo('quiz.html')">Quiz</button>
+        <button class="navbutton" onclick="navigateTo('about.html')">About</button>
+    </div>
+    <main class="main">
+        <h1>Quiz About Me</h1>
+        <form onsubmit="checkAnswers(); return false;">
+            <label for="question1"><b>What is my favourite color?</b> </label><br>
+            <input type="text" id="question1" name="question1"><br><br>
+            <label for="question2"><b>What is my hobby?</b></label><br>
+            <input type="text" id="question2" name="question2"><br><br>
+            <label for="question3"><b>What is my Nickname?</b></label><br>
+            <input type="text" id="question3" name="question3"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer class="footer">
+        <p>Copyright © 2024 victor's Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

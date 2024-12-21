@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.nav {
+    height: 10vh;
+    background-color:#162F56;
+    padding: 1em;
+    text-align:left;
+    display:flex;
+    justify-content:space-between;
+    flex:wrap;
+
+}
+.navbutton {
+    font-weight:bold;
+    background-color: #E7DDFF;
+    cursor: pointer;
+    margin:10px;
+    padding-left:20px;
+    padding-right:20px;
+    width:150px;
+    border-radius:10px;
+}
+.icon{
+    font-size:20px;
+}
+.main{
+    margin:90px;
+    text-align:center;
+    color:white;
+}
+.heading{
+    color:white;
+    margin-right:20%;
+}
+.back{
+    background-image:url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size:cover;
+}
+.footer {
+    margin:20px;
+    text-align:center;
+    color:white;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+.contact-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.contact-icons a:hover {
+    color: #007BFF;
+}
+
